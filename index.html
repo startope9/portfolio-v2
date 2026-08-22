@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M P Akash — Software Engineer, AI Systems</title>
+<meta name="description" content="M P Akash — Computer Science graduate building production AI systems and cloud-native backend platforms at Saviynt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand"><span class="mark">MA</span> M P Akash</a>
+    <div class="nav__links" id="navLinks">
+      <a href="#about" data-target="about">About</a>
+      <a href="#experience" data-target="experience">Experience</a>
+      <a href="#projects" data-target="projects">Projects</a>
+      <a href="#skills" data-target="skills">Skills</a>
+      <a href="#education" data-target="education">Education</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+  <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle light and dark theme" aria-pressed="false" style="margin-top:14px;">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Software Engineer · AI Systems</p>
+        <h1 class="hero__title">Building AI systems that make it to <span class="accent">production</span> — not just a demo.</h1>
+        <p class="hero__summary">
+          Computer Science graduate (<strong>R.V. College of Engineering</strong>, 2025) currently shipping
+          AI-driven support automation at <strong>Saviynt</strong>. I work across the full stack — Python/Java
+          backends, AWS infrastructure, and RAG/agentic AI pipelines — and care most about the part after the
+          prototype, where something has to run reliably and actually save people time.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://drive.google.com/drive/folders/1K5in6GyANWz6mOTw8YMOhgxZmgwFxjPf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn btn--ghost" href="#projects">See Projects</a>
+          <a class="btn btn--ghost" href="mailto:akashmadugonde@gmail.com">Get in Touch</a>
+        </div>
+        <div class="hero__meta">
+          <div><span class="dot"></span> Bengaluru, India</div>
+          <div><span class="dot"></span> SWE Intern @ Saviynt</div>
+          <div><span class="dot"></span> Open to new grad roles</div>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <div class="hero__photo-inner">
+          <img src="akash.jpg" alt="M P Akash">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT STRIP (signature) ============ -->
+  <section class="impact wrap reveal">
+    <div class="impact__grid">
+      <div class="impact__cell">
+        <div class="impact__num">&lt;20s</div>
+        <div class="impact__label">RCA report generation — down from multiple days</div>
+      </div>
+      <div class="impact__cell">
+        <div class="impact__num">34%</div>
+        <div class="impact__label">Support tickets resolved autonomously by AI agents</div>
+      </div>
+      <div class="impact__cell">
+        <div class="impact__num">90%</div>
+        <div class="impact__label">Accuracy classifying router failures from logs</div>
+      </div>
+      <div class="impact__cell">
+        <div class="impact__num">92%</div>
+        <div class="impact__label">Intrusion detection accuracy, up from an 85% baseline</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="wrap">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="section-title reveal">A quick snapshot</h2>
+    <p class="section-lede reveal">
+      The short version: I graduated in CS, I've spent the last year and a half building AI products used by real
+      customers, and I'm most energized by the unglamorous work of making a system actually reliable.
+    </p>
+    <div class="about__grid reveal">
+      <div class="fact-card">
+        <div class="fact-card__label">Current role</div>
+        <div class="fact-card__value">Software Engineering Intern, Saviynt — building AI-powered support automation and audit tooling on AWS.</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-card__label">Education</div>
+        <div class="fact-card__value">B.E. Computer Science, R.V. College of Engineering — CGPA 8.38, graduated 2025.</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-card__label">Core strengths</div>
+        <div class="fact-card__value">Python & Java backends, AWS-native architecture, RAG & agentic AI pipelines, distributed systems.</div>
+      </div>
+      <div class="fact-card">
+        <div class="fact-card__label">Also worth knowing</div>
+        <div class="fact-card__value">Published researcher (real-time sports analytics), and I've shipped intern-to-production code at two companies before graduating.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="wrap">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="section-title reveal">Where I've worked</h2>
+    <p class="section-lede reveal">Three roles, each building AI or web systems that shipped to real users — not just coursework.</p>
+
+    <div class="timeline">
+      <div class="exp-card reveal">
+        <div class="exp-card__head">
+          <div class="exp-card__role">Software Engineering Intern — <span class="company">Saviynt</span></div>
+          <div class="exp-card__dates">Jan 2026 — Present</div>
+        </div>
+        <div class="exp-card__stack">
+          <span class="stack-pill">Python</span><span class="stack-pill">AWS</span><span class="stack-pill">Bedrock Claude</span><span class="stack-pill">DynamoDB</span><span class="stack-pill">SQS</span>
+        </div>
+        <ul class="exp-card__list">
+          <li>Architected an AI-powered RCA generation platform, cutting customer-facing report creation time from <strong>days to under 20 seconds</strong> while enforcing secure handling of sensitive data.</li>
+          <li>Designed a multi-agent support automation system with 7+ AI agents, reaching a <strong>34% autonomous resolution rate</strong> in phased rollout and cutting first-response time from ~4 hours to under 5 minutes.</li>
+          <li>Built an AI-driven ticket intelligence platform automating sentiment analysis, customer health reporting, and root-cause correlation across enterprise support workflows.</li>
+          <li>Developed serverless SLA monitoring and productivity automation, reducing SLA breaches through proactive escalation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-card__head">
+          <div class="exp-card__role">AI Intern — <span class="company">Juniper Networks</span></div>
+          <div class="exp-card__dates">Jan 2025 — Jul 2025</div>
+        </div>
+        <div class="exp-card__stack">
+          <span class="stack-pill">Python</span><span class="stack-pill">ReactJS</span><span class="stack-pill">FastAPI</span><span class="stack-pill">OpenAI</span><span class="stack-pill">OpenSearch</span>
+        </div>
+        <ul class="exp-card__list">
+          <li>Built an AI log classification pipeline using LLM summarization, OpenSearch, and NV-Embed embeddings to categorize router failures at <strong>90% accuracy</strong>, cutting manual triage effort by half.</li>
+          <li>Optimized log analytics for 100K+ records with FastAPI concurrency and caching, dropping API latency from <strong>800ms to 150ms</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-card__head">
+          <div class="exp-card__role">Web Development Intern — <span class="company">R.V. College of Engineering</span></div>
+          <div class="exp-card__dates">Jun 2022 — Dec 2022</div>
+        </div>
+        <div class="exp-card__stack">
+          <span class="stack-pill">Flask</span><span class="stack-pill">MySQL</span><span class="stack-pill">JavaScript</span>
+        </div>
+        <ul class="exp-card__list">
+          <li>Led development of a Flask–MySQL platform that replaced Excel-based outcome assessment workflows, automating data collection, calculations, and reporting for faculty across departments.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="wrap">
+    <p class="eyebrow reveal">Projects</p>
+    <h2 class="section-title reveal">Things I've built</h2>
+    <p class="section-lede reveal">A mix of applied AI, systems, and full-stack projects — most with code you can go read.</p>
+
+    <div class="projects-grid reveal">
+      <div class="project-card">
+        <div class="project-card__top"><span class="project-card__index">01</span></div>
+        <div class="project-card__title">AI PDF Assistant with Microservices</div>
+        <p class="project-card__desc">Microservice-based PDF assistant using Spring Boot, Redis, OCR, and Pinecone vector search, with FLAN‑T5‑powered RAG pipelines enabling document Q&A and web fallback via the Tavily API.</p>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Redis</span><span class="tag">Python</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/startope9/multimodalRAG/" target="_blank" rel="noopener">View repository →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__top"><span class="project-card__index">02</span></div>
+        <div class="project-card__title">AI Chatbot for Patent Search</div>
+        <p class="project-card__desc">Containerized FastAPI platform integrating MistralAI, LangChain, MongoDB, Redis, and ChromaDB to support semantic retrieval and conversational patent analysis.</p>
+        <div class="tag-row">
+          <span class="tag">RAG-LLM</span><span class="tag">MistralAI</span><span class="tag">LangChain</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/startope9/AI-for-Patent-Documents" target="_blank" rel="noopener">View repository →</a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__top"><span class="project-card__index">03</span></div>
+        <div class="project-card__title">Network Intrusion Detection System</div>
+        <p class="project-card__desc">Genetic algorithm-driven feature selection pipeline that improved intrusion detection accuracy from 85% to 92%, paired with a Gaussian Naive Bayes classifier for low-latency threat prediction.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Genetic Algorithm</span>
+        </div>
+        <span class="project-card__link disabled">Private repository</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card__top"><span class="project-card__index">04</span></div>
+        <div class="project-card__title">Real-time Ball Badminton Analytics</div>
+        <p class="project-card__desc">Co-authored a ReactJS–Flask–Firebase platform enabling real-time sports analytics, visualization, and live match insights for players, coaches, and spectators. Published, ISBN 978-93-5877-507-5.</p>
+        <div class="tag-row">
+          <span class="tag">ReactJS</span><span class="tag">Flask</span><span class="tag">Firebase</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/startope9/BallBadminton" target="_blank" rel="noopener">View repository →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="wrap">
+    <p class="eyebrow reveal">Skills</p>
+    <h2 class="section-title reveal">Tools I work with</h2>
+    <p class="section-lede reveal">Grouped by how I actually use them day to day.</p>
+
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <div class="skill-group__title">Languages</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">C</span><span class="skill-chip">C++</span><span class="skill-chip">Python</span>
+          <span class="skill-chip">JavaScript</span><span class="skill-chip">TypeScript</span><span class="skill-chip">SQL</span><span class="skill-chip">Java</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group__title">AI / GenAI</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">Bedrock Claude</span><span class="skill-chip">OpenAI APIs</span><span class="skill-chip">LangChain</span>
+          <span class="skill-chip">RAG Pipelines</span><span class="skill-chip">Agentic AI</span><span class="skill-chip">Scikit-learn</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group__title">Cloud & DevOps</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">AWS Lambda</span><span class="skill-chip">DynamoDB</span><span class="skill-chip">EventBridge</span>
+          <span class="skill-chip">SQS</span><span class="skill-chip">CloudWatch</span><span class="skill-chip">Docker</span>
+          <span class="skill-chip">Redis</span><span class="skill-chip">Kafka</span><span class="skill-chip">Git</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group__title">Web Development</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">Flask</span><span class="skill-chip">Django</span><span class="skill-chip">ReactJS</span>
+          <span class="skill-chip">FastAPI</span><span class="skill-chip">REST APIs</span><span class="skill-chip">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group__title">Databases & Storage</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">MySQL</span><span class="skill-chip">MongoDB</span><span class="skill-chip">Firebase</span>
+          <span class="skill-chip">Elasticsearch</span><span class="skill-chip">ChromaDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group__title">Core CS</div>
+        <div class="skill-group__items">
+          <span class="skill-chip">Data Structures & Algorithms</span><span class="skill-chip">Operating Systems</span>
+          <span class="skill-chip">Computer Networks</span><span class="skill-chip">DBMS</span><span class="skill-chip">Microservices</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="wrap">
+    <p class="eyebrow reveal">Education & Research</p>
+    <h2 class="section-title reveal">Background</h2>
+
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-card__school">R.V. College of Engineering</div>
+        <p class="edu-card__degree">Bachelor of Engineering, Computer Science and Engineering</p>
+        <span class="edu-card__meta">Dec 2021 — Jul 2025 · CGPA 8.38</span>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-card__label">Research Publication</div>
+        <div class="pub-card__title">Real-time Insights and Visualizations for Unprecedented Impact in Ball Badminton</div>
+        <div class="pub-card__meta">ISBN 978-93-5877-507-5 · 2023</div>
+        <p class="pub-card__desc">Co-authored a ReactJS–Flask–Firebase platform enabling real-time sports analytics and live match insights for players, coaches, and spectators.</p>
+        <a class="project-card__link" href="https://github.com/startope9/BallBadminton" target="_blank" rel="noopener">View repository →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="wrap contact">
+    <p class="eyebrow reveal" style="justify-content:center;">Contact</p>
+    <h2 class="contact__title reveal">Let's build something <span class="accent">worth shipping</span>.</h2>
+    <p class="contact__lede reveal">Open to new grad software engineering and AI roles. Reach out — I usually reply within a day.</p>
+    <div class="contact__actions reveal">
+      <a class="btn btn--primary" href="mailto:akashmadugonde@gmail.com">Email Me</a>
+      <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1K5in6GyANWz6mOTw8YMOhgxZmgwFxjPf" target="_blank" rel="noopener">View Resume</a>
+    </div>
+    <div class="contact__links reveal">
+      <a href="mailto:akashmadugonde@gmail.com">akashmadugonde@gmail.com</a>
+      <a href="tel:+917019050199">+91 70190 50199</a>
+      <a href="https://github.com/startope9" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mp-akash-101027239/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://leetcode.com/u/mp_aka_sh/" target="_blank" rel="noopener">LeetCode</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 M P Akash. Built with HTML, CSS & JS.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
