@@ -15,7 +15,7 @@
   if (prefersReducedMotion) return;
 
   const ctx = canvas.getContext('2d');
-  let width, height, nodes, dpr;
+  let width, height, pageHeight, nodes, dpr;
   let running = true;
   let rafId = null;
 
@@ -30,6 +30,7 @@
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     width = window.innerWidth;
     height = window.innerHeight;
+    pageHeight = Math.max(document.documentElement.scrollHeight, height);
     canvas.width = width * dpr;
     canvas.height = height * dpr;
     canvas.style.width = width + 'px';
@@ -39,14 +40,14 @@
   }
 
   function seedNodes() {
-    const area = width * height;
-    const count = Math.max(24, Math.min(70, Math.round(area / 22000)));
+    const area = width * pageHeight;
+    const count = Math.max(24, Math.min(600, Math.round(area / 22000)));
     nodes = Array.from({ length: count }, () => ({
       x: Math.random() * width,
-      y: Math.random() * height,
+      y: Math.random() * pageHeight,
       vx: (Math.random() - 0.5) * 0.28,
       vy: (Math.random() - 0.5) * 0.28,
-      r: Math.random() * 1.4 + 0.6
+      r: Math.random() * 1.6 + 0.9
     }));
   }
 
@@ -55,35 +56,40 @@
   function step() {
     if (!running) return;
     ctx.clearRect(0, 0, width, height);
+    const scrollY = window.scrollY;
 
     for (const n of nodes) {
       n.x += n.vx;
       n.y += n.vy;
       if (n.x < 0 || n.x > width) n.vx *= -1;
-      if (n.y < 0 || n.y > height) n.vy *= -1;
+      if (n.y < 0 || n.y > pageHeight) n.vy *= -1;
     }
 
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const a = nodes[i], b = nodes[j];
-        const dx = a.x - b.x, dy = a.y - b.y;
+    const visibleNodes = nodes
+      .filter(n => n.y - scrollY >= -LINK_DIST && n.y - scrollY <= height + LINK_DIST)
+      .map(n => ({ node: n, screenY: n.y - scrollY }));
+
+    for (let i = 0; i < visibleNodes.length; i++) {
+      for (let j = i + 1; j < visibleNodes.length; j++) {
+        const a = visibleNodes[i], b = visibleNodes[j];
+        const dx = a.node.x - b.node.x, dy = a.screenY - b.screenY;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < LINK_DIST) {
-          const alpha = (1 - dist / LINK_DIST) * 0.35;
+          const alpha = (1 - dist / LINK_DIST) * 0.8;
           ctx.strokeStyle = `rgba(${ACCENT}, ${alpha})`;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 1.6;
           ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
+          ctx.moveTo(a.node.x, a.screenY);
+          ctx.lineTo(b.node.x, b.screenY);
           ctx.stroke();
         }
       }
     }
 
-    for (const n of nodes) {
-      ctx.fillStyle = `rgba(${ACCENT}, 0.75)`;
+    for (const { node: n, screenY } of visibleNodes) {
+      ctx.fillStyle = `rgba(${ACCENT}, 0.95)`;
       ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.arc(n.x, screenY, n.r, 0, Math.PI * 2);
       ctx.fill();
     }
 
