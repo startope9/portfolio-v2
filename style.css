@@ -115,7 +115,8 @@ img { max-width: 100%; display: block; }
 .wrap {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 30px !important;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .eyebrow {
@@ -148,10 +149,10 @@ h2.section-title {
   color: var(--text-muted);
   font-size: 16px;
   max-width: 62ch;
-  margin: 0 0 44px;
+  margin: 0 0 32px;
 }
 
-section { padding: 96px 0; border-bottom: 1px solid var(--border-soft); }
+section { padding: 32px 0; border-bottom: 1px solid var(--border-soft); }
 section:last-of-type { border-bottom: none; }
 
 /* reveal-on-scroll */
@@ -302,8 +303,8 @@ section:last-of-type { border-bottom: none; }
    HERO
    ============================================================ */
 .hero {
-  padding-top: 84px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+  padding-bottom: 32px;
   border-bottom: none;
 }
 .hero__grid {
@@ -377,7 +378,7 @@ section:last-of-type { border-bottom: none; }
 
 /* ---- Impact strip (signature element) ---- */
 .impact {
-  padding: 0 0 88px;
+  padding: 0 0 40px;
   border-bottom: 1px solid var(--border-soft);
 }
 .impact__grid {
@@ -389,7 +390,7 @@ section:last-of-type { border-bottom: none; }
   background: var(--surface-panel);
 }
 .impact__cell {
-  padding: 30px 24px;
+  padding: 24px 20px;
   border-right: 1px solid var(--border-soft);
   text-align: center;
 }
@@ -419,13 +420,13 @@ section:last-of-type { border-bottom: none; }
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 16px;
 }
 @media (max-width: 760px) { .about__grid { grid-template-columns: 1fr; } }
 .fact-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 20px;
   background: var(--surface-panel);
 }
 .fact-card__label {
@@ -446,8 +447,8 @@ section:last-of-type { border-bottom: none; }
   border: 1px solid var(--border);
   background: var(--surface-panel);
   border-radius: var(--radius);
-  padding: 32px;
-  margin-bottom: 22px;
+  padding: 24px;
+  margin-bottom: 16px;
   position: relative;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
@@ -473,7 +474,7 @@ section:last-of-type { border-bottom: none; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 14px 0 18px;
+  margin: 10px 0 14px;
 }
 .stack-pill {
   font-family: var(--font-mono);
@@ -485,20 +486,20 @@ section:last-of-type { border-bottom: none; }
   padding: 4px 11px;
 }
 .exp-card__list { margin: 0; padding-left: 20px; color: var(--text-muted); font-size: 14.5px; }
-.exp-card__list li { margin-bottom: 9px; }
+.exp-card__list li { margin-bottom: 6px; }
 .exp-card__list li::marker { color: var(--blue); }
 .exp-card__list li strong { color: var(--text); font-weight: 600; }
 
 /* ============================================================
    PROJECTS
    ============================================================ */
-.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 760px) { .projects-grid { grid-template-columns: 1fr; } }
 .project-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface-panel);
-  padding: 26px;
+  padding: 22px;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -544,14 +545,14 @@ section:last-of-type { border-bottom: none; }
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 18px;
 }
 @media (max-width: 900px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .skills-grid { grid-template-columns: 1fr; } }
 .skill-group {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 18px;
   background: var(--surface-panel);
 }
 .skill-group__title {
@@ -584,12 +585,12 @@ section:last-of-type { border-bottom: none; }
 /* ============================================================
    EDUCATION
    ============================================================ */
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 @media (max-width: 760px) { .edu-grid { grid-template-columns: 1fr; } }
 .edu-card, .pub-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 22px;
   background: var(--surface-panel);
 }
 .edu-card__school { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); margin: 0 0 6px; }
